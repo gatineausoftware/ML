@@ -1,0 +1,304 @@
+age,sex,chest-pain-type,resting-blood-pressure,cholesterol,fasting-blood-sugar,resting-ecg,max-heart-rate,exercise-angina,oldpeak,slope,colored-vessels,thal,datetime,postalcode,narrowing-diagnosis
+63,male,typical angina,145,233,TRUE,left ventricular hypertrophy,150,no,2.3,downsloping,0,fixed defect,2018-08-07,92129,0
+67,male,asymptomatic,160,286,FALSE,left ventricular hypertrophy,108,yes,1.5,flat,3,normal,2018-08-08,92129,1
+67,male,asymptomatic,120,229,FALSE,left ventricular hypertrophy,129,yes,2.6,flat,2,reversable defect,2018-08-09,92129,1
+37,male,non-anginal pain,130,250,FALSE,normal,187,no,3.5,downsloping,0,normal,2018-08-10,92129,0
+41,female,atypical angina,130,204,FALSE,left ventricular hypertrophy,172,no,1.4,unsloping,0,normal,2018-08-11,92129,0
+56,male,atypical angina,120,236,FALSE,normal,178,no,0.8,unsloping,0,normal,2018-08-12,92129,0
+62,female,asymptomatic,140,268,FALSE,left ventricular hypertrophy,160,no,3.6,downsloping,2,normal,2018-08-13,92129,1
+57,female,asymptomatic,120,354,FALSE,normal,163,yes,0.6,unsloping,0,normal,2018-08-14,92129,0
+63,male,asymptomatic,130,254,FALSE,left ventricular hypertrophy,147,no,1.4,flat,1,reversable defect,2018-08-15,92129,1
+53,male,asymptomatic,140,203,TRUE,left ventricular hypertrophy,155,yes,3.1,downsloping,0,reversable defect,2018-08-16,92129,1
+57,male,asymptomatic,140,192,FALSE,normal,148,no,0.4,flat,0,fixed defect,2018-08-17,92129,0
+56,female,atypical angina,140,294,FALSE,left ventricular hypertrophy,153,no,1.3,flat,0,normal,2018-08-18,92129,0
+56,male,non-anginal pain,130,256,TRUE,left ventricular hypertrophy,142,yes,0.6,flat,1,fixed defect,2018-08-19,92129,1
+44,male,atypical angina,120,263,FALSE,normal,173,no,0,unsloping,0,reversable defect,2018-08-20,92129,0
+52,male,non-anginal pain,172,199,TRUE,normal,162,no,0.5,unsloping,0,reversable defect,2018-08-21,92129,0
+57,male,non-anginal pain,150,168,FALSE,normal,174,no,1.6,unsloping,0,normal,2018-08-22,92129,0
+48,male,atypical angina,110,229,FALSE,normal,168,no,1,downsloping,0,reversable defect,2018-08-23,92129,1
+54,male,asymptomatic,140,239,FALSE,normal,160,no,1.2,unsloping,0,normal,2018-08-24,92129,0
+48,female,non-anginal pain,130,275,FALSE,normal,139,no,0.2,unsloping,0,normal,2018-08-25,92129,0
+49,male,atypical angina,130,266,FALSE,normal,171,no,0.6,unsloping,0,normal,2018-08-26,92129,0
+64,male,typical angina,110,211,FALSE,left ventricular hypertrophy,144,yes,1.8,flat,0,normal,2018-08-27,92129,0
+58,female,typical angina,150,283,TRUE,left ventricular hypertrophy,162,no,1,unsloping,0,normal,2018-08-28,92129,0
+58,male,atypical angina,120,284,FALSE,left ventricular hypertrophy,160,no,1.8,flat,0,normal,2018-08-29,92129,1
+58,male,non-anginal pain,132,224,FALSE,left ventricular hypertrophy,173,no,3.2,unsloping,2,reversable defect,2018-08-30,92129,1
+60,male,asymptomatic,130,206,FALSE,left ventricular hypertrophy,132,yes,2.4,flat,2,reversable defect,2018-08-31,92129,1
+50,female,non-anginal pain,120,219,FALSE,normal,158,no,1.6,flat,0,normal,2018-09-01,92129,0
+58,female,non-anginal pain,120,340,FALSE,normal,172,no,0,unsloping,0,normal,2018-09-02,92129,0
+66,female,typical angina,150,226,FALSE,normal,114,no,2.6,downsloping,0,normal,2018-09-03,92129,0
+43,male,asymptomatic,150,247,FALSE,normal,171,no,1.5,unsloping,0,normal,2018-09-04,92129,0
+40,male,asymptomatic,110,167,FALSE,left ventricular hypertrophy,114,yes,2,flat,0,reversable defect,2018-09-05,92129,1
+69,female,typical angina,140,239,FALSE,normal,151,no,1.8,unsloping,2,normal,2018-09-06,92129,0
+60,male,asymptomatic,117,230,TRUE,normal,160,yes,1.4,unsloping,2,reversable defect,2018-09-07,92129,1
+64,male,non-anginal pain,140,335,FALSE,normal,158,no,0,unsloping,0,normal,2018-09-08,92129,1
+59,male,asymptomatic,135,234,FALSE,normal,161,no,0.5,flat,0,reversable defect,2018-09-09,92129,0
+44,male,non-anginal pain,130,233,FALSE,normal,179,yes,0.4,unsloping,0,normal,2018-09-10,92129,0
+42,male,asymptomatic,140,226,FALSE,normal,178,no,0,unsloping,0,normal,2018-09-11,92129,0
+43,male,asymptomatic,120,177,FALSE,left ventricular hypertrophy,120,yes,2.5,flat,0,reversable defect,2018-09-12,92129,1
+57,male,asymptomatic,150,276,FALSE,left ventricular hypertrophy,112,yes,0.6,flat,1,fixed defect,2018-09-13,92129,1
+55,male,asymptomatic,132,353,FALSE,normal,132,yes,1.2,flat,1,reversable defect,2018-09-14,92129,1
+61,male,non-anginal pain,150,243,TRUE,normal,137,yes,1,flat,0,normal,2018-09-15,92129,0
+65,female,asymptomatic,150,225,FALSE,left ventricular hypertrophy,114,no,1,flat,3,reversable defect,2018-09-16,92129,1
+40,male,typical angina,140,199,FALSE,normal,178,yes,1.4,unsloping,0,reversable defect,2018-09-17,92129,0
+71,female,atypical angina,160,302,FALSE,normal,162,no,0.4,unsloping,2,normal,2018-09-18,92129,0
+59,male,non-anginal pain,150,212,TRUE,normal,157,no,1.6,unsloping,0,normal,2018-09-19,92129,0
+61,female,asymptomatic,130,330,FALSE,left ventricular hypertrophy,169,no,0,unsloping,0,normal,2018-09-20,92129,1
+58,male,non-anginal pain,112,230,FALSE,left ventricular hypertrophy,165,no,2.5,flat,1,reversable defect,2018-09-21,92129,1
+51,male,non-anginal pain,110,175,FALSE,normal,123,no,0.6,unsloping,0,normal,2018-09-22,92129,0
+50,male,asymptomatic,150,243,FALSE,left ventricular hypertrophy,128,no,2.6,flat,0,reversable defect,2018-09-23,92129,1
+65,female,non-anginal pain,140,417,TRUE,left ventricular hypertrophy,157,no,0.8,unsloping,1,normal,2018-09-24,92129,0
+53,male,non-anginal pain,130,197,TRUE,left ventricular hypertrophy,152,no,1.2,downsloping,0,normal,2018-09-25,92129,0
+41,female,atypical angina,105,198,FALSE,normal,168,no,0,unsloping,1,normal,2018-09-26,92129,0
+65,male,asymptomatic,120,177,FALSE,normal,140,no,0.4,unsloping,0,reversable defect,2018-09-27,92129,0
+44,male,asymptomatic,112,290,FALSE,left ventricular hypertrophy,153,no,0,unsloping,1,normal,2018-09-28,92129,1
+44,male,atypical angina,130,219,FALSE,left ventricular hypertrophy,188,no,0,unsloping,0,normal,2018-09-29,92129,0
+60,male,asymptomatic,130,253,FALSE,normal,144,yes,1.4,unsloping,1,reversable defect,2018-09-30,92129,1
+54,male,asymptomatic,124,266,FALSE,left ventricular hypertrophy,109,yes,2.2,flat,1,reversable defect,2018-10-01,92129,1
+50,male,non-anginal pain,140,233,FALSE,normal,163,no,0.6,flat,1,reversable defect,2018-10-02,92129,1
+41,male,asymptomatic,110,172,FALSE,left ventricular hypertrophy,158,no,0,unsloping,0,reversable defect,2018-10-03,92129,1
+54,male,non-anginal pain,125,273,FALSE,left ventricular hypertrophy,152,no,0.5,downsloping,1,normal,2018-10-04,92129,0
+51,male,typical angina,125,213,FALSE,left ventricular hypertrophy,125,yes,1.4,unsloping,1,normal,2018-10-05,92129,0
+51,female,asymptomatic,130,305,FALSE,normal,142,yes,1.2,flat,0,reversable defect,2018-10-06,92129,1
+46,female,non-anginal pain,142,177,FALSE,left ventricular hypertrophy,160,yes,1.4,downsloping,0,normal,2018-10-07,92129,0
+58,male,asymptomatic,128,216,FALSE,left ventricular hypertrophy,131,yes,2.2,flat,3,reversable defect,2018-10-08,92129,1
+54,female,non-anginal pain,135,304,TRUE,normal,170,no,0,unsloping,0,normal,2018-10-09,92129,0
+54,male,asymptomatic,120,188,FALSE,normal,113,no,1.4,flat,1,reversable defect,2018-10-10,92129,1
+60,male,asymptomatic,145,282,FALSE,left ventricular hypertrophy,142,yes,2.8,flat,2,reversable defect,2018-10-11,92129,1
+60,male,non-anginal pain,140,185,FALSE,left ventricular hypertrophy,155,no,3,flat,0,normal,2018-10-12,92129,1
+54,male,non-anginal pain,150,232,FALSE,left ventricular hypertrophy,165,no,1.6,unsloping,0,reversable defect,2018-10-13,92129,0
+59,male,asymptomatic,170,326,FALSE,left ventricular hypertrophy,140,yes,3.4,downsloping,0,reversable defect,2018-10-14,92129,1
+46,male,non-anginal pain,150,231,FALSE,normal,147,no,3.6,flat,0,normal,2018-10-15,92129,1
+65,female,non-anginal pain,155,269,FALSE,normal,148,no,0.8,unsloping,0,normal,2018-10-16,92129,0
+67,male,asymptomatic,125,254,TRUE,normal,163,no,0.2,flat,2,reversable defect,2018-10-17,92129,1
+62,male,asymptomatic,120,267,FALSE,normal,99,yes,1.8,flat,2,reversable defect,2018-10-18,92129,1
+65,male,asymptomatic,110,248,FALSE,left ventricular hypertrophy,158,no,0.6,unsloping,2,fixed defect,2018-10-19,92129,1
+44,male,asymptomatic,110,197,FALSE,left ventricular hypertrophy,177,no,0,unsloping,1,normal,2018-10-20,92129,1
+65,female,non-anginal pain,160,360,FALSE,left ventricular hypertrophy,151,no,0.8,unsloping,0,normal,2018-10-21,92129,0
+60,male,asymptomatic,125,258,FALSE,left ventricular hypertrophy,141,yes,2.8,flat,1,reversable defect,2018-10-22,92129,1
+51,female,non-anginal pain,140,308,FALSE,left ventricular hypertrophy,142,no,1.5,unsloping,1,normal,2018-10-23,92129,0
+48,male,atypical angina,130,245,FALSE,left ventricular hypertrophy,180,no,0.2,flat,0,normal,2018-10-24,92129,0
+58,male,asymptomatic,150,270,FALSE,left ventricular hypertrophy,111,yes,0.8,unsloping,0,reversable defect,2018-10-25,92129,1
+45,male,asymptomatic,104,208,FALSE,left ventricular hypertrophy,148,yes,3,flat,0,normal,2018-10-26,92129,0
+53,female,asymptomatic,130,264,FALSE,left ventricular hypertrophy,143,no,0.4,flat,0,normal,2018-10-27,92129,0
+39,male,non-anginal pain,140,321,FALSE,left ventricular hypertrophy,182,no,0,unsloping,0,normal,2018-10-28,92129,0
+68,male,non-anginal pain,180,274,TRUE,left ventricular hypertrophy,150,yes,1.6,flat,0,reversable defect,2018-10-29,92129,1
+52,male,atypical angina,120,325,FALSE,normal,172,no,0.2,unsloping,0,normal,2018-10-30,92129,0
+44,male,non-anginal pain,140,235,FALSE,left ventricular hypertrophy,180,no,0,unsloping,0,normal,2018-10-31,92129,0
+47,male,non-anginal pain,138,257,FALSE,left ventricular hypertrophy,156,no,0,unsloping,0,normal,2018-11-01,92129,0
+53,female,non-anginal pain,128,216,FALSE,left ventricular hypertrophy,115,no,0,unsloping,0,?,2018-11-02,92129,0
+53,female,asymptomatic,138,234,FALSE,left ventricular hypertrophy,160,no,0,unsloping,0,normal,2018-11-03,92129,0
+51,female,non-anginal pain,130,256,FALSE,left ventricular hypertrophy,149,no,0.5,unsloping,0,normal,2018-11-04,92129,0
+66,male,asymptomatic,120,302,FALSE,left ventricular hypertrophy,151,no,0.4,flat,0,normal,2018-11-05,92129,0
+62,female,asymptomatic,160,164,FALSE,left ventricular hypertrophy,145,no,6.2,downsloping,3,reversable defect,2018-11-06,92129,1
+62,male,non-anginal pain,130,231,FALSE,normal,146,no,1.8,flat,3,reversable defect,2018-11-07,92129,0
+44,female,non-anginal pain,108,141,FALSE,normal,175,no,0.6,flat,0,normal,2018-11-08,92129,0
+63,female,non-anginal pain,135,252,FALSE,left ventricular hypertrophy,172,no,0,unsloping,0,normal,2018-11-09,92129,0
+52,male,asymptomatic,128,255,FALSE,normal,161,yes,0,unsloping,1,reversable defect,2018-11-10,92129,1
+59,male,asymptomatic,110,239,FALSE,left ventricular hypertrophy,142,yes,1.2,flat,1,reversable defect,2018-11-11,92129,1
+60,female,asymptomatic,150,258,FALSE,left ventricular hypertrophy,157,no,2.6,flat,2,reversable defect,2018-11-12,92129,1
+52,male,atypical angina,134,201,FALSE,normal,158,no,0.8,unsloping,1,normal,2018-11-13,92129,0
+48,male,asymptomatic,122,222,FALSE,left ventricular hypertrophy,186,no,0,unsloping,0,normal,2018-11-14,92129,0
+45,male,asymptomatic,115,260,FALSE,left ventricular hypertrophy,185,no,0,unsloping,0,normal,2018-11-15,92129,0
+34,male,typical angina,118,182,FALSE,left ventricular hypertrophy,174,no,0,unsloping,0,normal,2018-11-16,92129,0
+57,female,asymptomatic,128,303,FALSE,left ventricular hypertrophy,159,no,0,unsloping,1,normal,2018-11-17,92129,0
+71,female,non-anginal pain,110,265,TRUE,left ventricular hypertrophy,130,no,0,unsloping,1,normal,2018-11-18,92129,0
+49,male,non-anginal pain,120,188,FALSE,normal,139,no,2,flat,3,reversable defect,2018-11-19,92129,1
+54,male,atypical angina,108,309,FALSE,normal,156,no,0,unsloping,0,reversable defect,2018-11-20,92129,0
+59,male,asymptomatic,140,177,FALSE,normal,162,yes,0,unsloping,1,reversable defect,2018-11-21,92129,1
+57,male,non-anginal pain,128,229,FALSE,left ventricular hypertrophy,150,no,0.4,flat,1,reversable defect,2018-11-22,92129,1
+61,male,asymptomatic,120,260,FALSE,normal,140,yes,3.6,flat,1,reversable defect,2018-11-23,92129,1
+39,male,asymptomatic,118,219,FALSE,normal,140,no,1.2,flat,0,reversable defect,2018-11-24,92129,1
+61,female,asymptomatic,145,307,FALSE,left ventricular hypertrophy,146,yes,1,flat,0,reversable defect,2018-11-25,92129,1
+56,male,asymptomatic,125,249,TRUE,left ventricular hypertrophy,144,yes,1.2,flat,1,normal,2018-11-26,92129,1
+52,male,typical angina,118,186,FALSE,left ventricular hypertrophy,190,no,0,flat,0,fixed defect,2018-11-27,92129,0
+43,female,asymptomatic,132,341,TRUE,left ventricular hypertrophy,136,yes,3,flat,0,reversable defect,2018-11-28,92129,1
+62,female,non-anginal pain,130,263,FALSE,normal,97,no,1.2,flat,1,reversable defect,2018-11-29,92129,1
+41,male,atypical angina,135,203,FALSE,normal,132,no,0,flat,0,fixed defect,2018-11-30,92129,0
+58,male,non-anginal pain,140,211,TRUE,left ventricular hypertrophy,165,no,0,unsloping,0,normal,2018-12-01,92129,0
+35,female,asymptomatic,138,183,FALSE,normal,182,no,1.4,unsloping,0,normal,2018-12-02,92129,0
+63,male,asymptomatic,130,330,TRUE,left ventricular hypertrophy,132,yes,1.8,unsloping,3,reversable defect,2018-12-03,92129,1
+65,male,asymptomatic,135,254,FALSE,left ventricular hypertrophy,127,no,2.8,flat,1,reversable defect,2018-12-04,92129,1
+48,male,asymptomatic,130,256,TRUE,left ventricular hypertrophy,150,yes,0,unsloping,2,reversable defect,2018-12-05,92129,1
+63,female,asymptomatic,150,407,FALSE,left ventricular hypertrophy,154,no,4,flat,3,reversable defect,2018-12-06,92129,1
+51,male,non-anginal pain,100,222,FALSE,normal,143,yes,1.2,flat,0,normal,2018-12-07,92129,0
+55,male,asymptomatic,140,217,FALSE,normal,111,yes,5.6,downsloping,0,reversable defect,2018-12-08,92129,1
+65,male,typical angina,138,282,TRUE,left ventricular hypertrophy,174,no,1.4,flat,1,normal,2018-12-09,92129,1
+45,female,atypical angina,130,234,FALSE,left ventricular hypertrophy,175,no,0.6,flat,0,normal,2018-12-10,92129,0
+56,female,asymptomatic,200,288,TRUE,left ventricular hypertrophy,133,yes,4,downsloping,2,reversable defect,2018-12-11,92129,1
+54,male,asymptomatic,110,239,FALSE,normal,126,yes,2.8,flat,1,reversable defect,2018-12-12,92129,1
+44,male,atypical angina,120,220,FALSE,normal,170,no,0,unsloping,0,normal,2018-12-13,92129,0
+62,female,asymptomatic,124,209,FALSE,normal,163,no,0,unsloping,0,normal,2018-12-14,92129,0
+54,male,non-anginal pain,120,258,FALSE,left ventricular hypertrophy,147,no,0.4,flat,0,reversable defect,2018-12-15,92129,0
+51,male,non-anginal pain,94,227,FALSE,normal,154,yes,0,unsloping,1,reversable defect,2018-12-16,92129,0
+29,male,atypical angina,130,204,FALSE,left ventricular hypertrophy,202,no,0,unsloping,0,normal,2018-12-17,92129,0
+51,male,asymptomatic,140,261,FALSE,left ventricular hypertrophy,186,yes,0,unsloping,0,normal,2018-12-18,92129,0
+43,female,non-anginal pain,122,213,FALSE,normal,165,no,0.2,flat,0,normal,2018-12-19,92129,0
+55,female,atypical angina,135,250,FALSE,left ventricular hypertrophy,161,no,1.4,flat,0,normal,2018-12-20,92129,0
+70,male,asymptomatic,145,174,FALSE,normal,125,yes,2.6,downsloping,0,reversable defect,2018-12-21,92129,1
+62,male,atypical angina,120,281,FALSE,left ventricular hypertrophy,103,no,1.4,flat,1,reversable defect,2018-12-22,92129,1
+35,male,asymptomatic,120,198,FALSE,normal,130,yes,1.6,flat,0,reversable defect,2018-12-23,92129,1
+51,male,non-anginal pain,125,245,TRUE,left ventricular hypertrophy,166,no,2.4,flat,0,normal,2018-12-24,92129,0
+59,male,atypical angina,140,221,FALSE,normal,164,yes,0,unsloping,0,normal,2018-12-25,92129,0
+59,male,typical angina,170,288,FALSE,left ventricular hypertrophy,159,no,0.2,flat,0,reversable defect,2018-12-26,92129,1
+52,male,atypical angina,128,205,TRUE,normal,184,no,0,unsloping,0,normal,2018-12-27,92129,0
+64,male,non-anginal pain,125,309,FALSE,normal,131,yes,1.8,flat,0,reversable defect,2018-12-28,92129,1
+58,male,non-anginal pain,105,240,FALSE,left ventricular hypertrophy,154,yes,0.6,flat,0,reversable defect,2018-12-29,92129,0
+47,male,non-anginal pain,108,243,FALSE,normal,152,no,0,unsloping,0,normal,2018-12-30,92129,1
+57,male,asymptomatic,165,289,TRUE,left ventricular hypertrophy,124,no,1,flat,3,reversable defect,2018-12-31,92129,1
+41,male,non-anginal pain,112,250,FALSE,normal,179,no,0,unsloping,0,normal,2019-01-01,92129,0
+45,male,atypical angina,128,308,FALSE,left ventricular hypertrophy,170,no,0,unsloping,0,normal,2019-01-02,92129,0
+60,female,non-anginal pain,102,318,FALSE,normal,160,no,0,unsloping,1,normal,2019-01-03,92129,0
+52,male,typical angina,152,298,TRUE,normal,178,no,1.2,flat,0,reversable defect,2019-01-04,92129,0
+42,female,asymptomatic,102,265,FALSE,left ventricular hypertrophy,122,no,0.6,flat,0,normal,2019-01-05,92129,0
+67,female,non-anginal pain,115,564,FALSE,left ventricular hypertrophy,160,no,1.6,flat,0,reversable defect,2019-01-06,92129,0
+55,male,asymptomatic,160,289,FALSE,left ventricular hypertrophy,145,yes,0.8,flat,1,reversable defect,2019-01-07,92129,1
+64,male,asymptomatic,120,246,FALSE,left ventricular hypertrophy,96,yes,2.2,downsloping,1,normal,2019-01-08,92129,1
+70,male,asymptomatic,130,322,FALSE,left ventricular hypertrophy,109,no,2.4,flat,3,normal,2019-01-09,92129,1
+51,male,asymptomatic,140,299,FALSE,normal,173,yes,1.6,unsloping,0,reversable defect,2019-01-10,92129,1
+58,male,asymptomatic,125,300,FALSE,left ventricular hypertrophy,171,no,0,unsloping,2,reversable defect,2019-01-11,92129,1
+60,male,asymptomatic,140,293,FALSE,left ventricular hypertrophy,170,no,1.2,flat,2,reversable defect,2019-01-12,92129,1
+68,male,non-anginal pain,118,277,FALSE,normal,151,no,1,unsloping,1,reversable defect,2019-01-13,92129,0
+46,male,atypical angina,101,197,TRUE,normal,156,no,0,unsloping,0,reversable defect,2019-01-14,92129,0
+77,male,asymptomatic,125,304,FALSE,left ventricular hypertrophy,162,yes,0,unsloping,3,normal,2019-01-15,92129,1
+54,female,non-anginal pain,110,214,FALSE,normal,158,no,1.6,flat,0,normal,2019-01-16,92129,0
+58,female,asymptomatic,100,248,FALSE,left ventricular hypertrophy,122,no,1,flat,0,normal,2019-01-17,92129,0
+48,male,non-anginal pain,124,255,TRUE,normal,175,no,0,unsloping,2,normal,2019-01-18,92129,0
+57,male,asymptomatic,132,207,FALSE,normal,168,yes,0,unsloping,0,reversable defect,2019-01-19,92129,0
+52,male,non-anginal pain,138,223,FALSE,normal,169,no,0,unsloping,?,normal,2019-01-20,92129,0
+54,female,atypical angina,132,288,TRUE,left ventricular hypertrophy,159,yes,0,unsloping,1,normal,2019-01-21,92129,0
+35,male,asymptomatic,126,282,FALSE,left ventricular hypertrophy,156,yes,0,unsloping,0,reversable defect,2019-01-22,92129,1
+45,female,atypical angina,112,160,FALSE,normal,138,no,0,flat,0,normal,2019-01-23,92129,0
+70,male,non-anginal pain,160,269,FALSE,normal,112,yes,2.9,flat,1,reversable defect,2019-01-24,92129,1
+53,male,asymptomatic,142,226,FALSE,left ventricular hypertrophy,111,yes,0,unsloping,0,reversable defect,2019-01-25,92129,0
+59,female,asymptomatic,174,249,FALSE,normal,143,yes,0,flat,0,normal,2019-01-26,92129,1
+62,female,asymptomatic,140,394,FALSE,left ventricular hypertrophy,157,no,1.2,flat,0,normal,2019-01-27,92129,0
+64,male,asymptomatic,145,212,FALSE,left ventricular hypertrophy,132,no,2,flat,2,fixed defect,2019-01-28,92129,1
+57,male,asymptomatic,152,274,FALSE,normal,88,yes,1.2,flat,1,reversable defect,2019-01-29,92129,1
+52,male,asymptomatic,108,233,TRUE,normal,147,no,0.1,unsloping,3,reversable defect,2019-01-30,92129,0
+56,male,asymptomatic,132,184,FALSE,left ventricular hypertrophy,105,yes,2.1,flat,1,fixed defect,2019-01-31,92129,1
+43,male,non-anginal pain,130,315,FALSE,normal,162,no,1.9,unsloping,1,normal,2019-02-01,92129,0
+53,male,non-anginal pain,130,246,TRUE,left ventricular hypertrophy,173,no,0,unsloping,3,normal,2019-02-02,92129,0
+48,male,asymptomatic,124,274,FALSE,left ventricular hypertrophy,166,no,0.5,flat,0,reversable defect,2019-02-03,92129,1
+56,female,asymptomatic,134,409,FALSE,left ventricular hypertrophy,150,yes,1.9,flat,2,reversable defect,2019-02-04,92129,1
+42,male,typical angina,148,244,FALSE,left ventricular hypertrophy,178,no,0.8,unsloping,2,normal,2019-02-05,92129,0
+59,male,typical angina,178,270,FALSE,left ventricular hypertrophy,145,no,4.2,downsloping,0,reversable defect,2019-02-06,92129,0
+60,female,asymptomatic,158,305,FALSE,left ventricular hypertrophy,161,no,0,unsloping,0,normal,2019-02-07,92129,1
+63,female,atypical angina,140,195,FALSE,normal,179,no,0,unsloping,2,normal,2019-02-08,92129,0
+42,male,non-anginal pain,120,240,TRUE,normal,194,no,0.8,downsloping,0,reversable defect,2019-02-09,92129,0
+66,male,atypical angina,160,246,FALSE,normal,120,yes,0,flat,3,fixed defect,2019-02-10,92129,1
+54,male,atypical angina,192,283,FALSE,left ventricular hypertrophy,195,no,0,unsloping,1,reversable defect,2019-02-11,92129,1
+69,male,non-anginal pain,140,254,FALSE,left ventricular hypertrophy,146,no,2,flat,3,reversable defect,2019-02-12,92129,1
+50,male,non-anginal pain,129,196,FALSE,normal,163,no,0,unsloping,0,normal,2019-02-13,92129,0
+51,male,asymptomatic,140,298,FALSE,normal,122,yes,4.2,flat,3,reversable defect,2019-02-14,92129,1
+43,male,asymptomatic,132,247,TRUE,left ventricular hypertrophy,143,yes,0.1,flat,?,reversable defect,2019-02-15,92129,1
+62,female,asymptomatic,138,294,TRUE,normal,106,no,1.9,flat,3,normal,2019-02-16,92129,1
+68,female,non-anginal pain,120,211,FALSE,left ventricular hypertrophy,115,no,1.5,flat,0,normal,2019-02-17,92129,0
+67,male,asymptomatic,100,299,FALSE,left ventricular hypertrophy,125,yes,0.9,flat,2,normal,2019-02-18,92129,1
+69,male,typical angina,160,234,TRUE,left ventricular hypertrophy,131,no,0.1,flat,1,normal,2019-02-19,92129,0
+45,female,asymptomatic,138,236,FALSE,left ventricular hypertrophy,152,yes,0.2,flat,0,normal,2019-02-20,92129,0
+50,female,atypical angina,120,244,FALSE,normal,162,no,1.1,unsloping,0,normal,2019-02-21,92129,0
+59,male,typical angina,160,273,FALSE,left ventricular hypertrophy,125,no,0,unsloping,0,normal,2019-02-22,92129,1
+50,female,asymptomatic,110,254,FALSE,left ventricular hypertrophy,159,no,0,unsloping,0,normal,2019-02-23,92129,0
+64,female,asymptomatic,180,325,FALSE,normal,154,yes,0,unsloping,0,normal,2019-02-24,92129,0
+57,male,non-anginal pain,150,126,TRUE,normal,173,no,0.2,unsloping,1,reversable defect,2019-02-25,92129,0
+64,female,non-anginal pain,140,313,FALSE,normal,133,no,0.2,unsloping,0,reversable defect,2019-02-26,92129,0
+43,male,asymptomatic,110,211,FALSE,normal,161,no,0,unsloping,0,reversable defect,2019-02-27,92129,0
+45,male,asymptomatic,142,309,FALSE,left ventricular hypertrophy,147,yes,0,flat,3,reversable defect,2019-02-28,92129,1
+58,male,asymptomatic,128,259,FALSE,left ventricular hypertrophy,130,yes,3,flat,2,reversable defect,2019-03-01,92129,1
+50,male,asymptomatic,144,200,FALSE,left ventricular hypertrophy,126,yes,0.9,flat,0,reversable defect,2019-03-02,92129,1
+55,male,atypical angina,130,262,FALSE,normal,155,no,0,unsloping,0,normal,2019-03-03,92129,0
+62,female,asymptomatic,150,244,FALSE,normal,154,yes,1.4,flat,0,normal,2019-03-04,92129,1
+37,female,non-anginal pain,120,215,FALSE,normal,170,no,0,unsloping,0,normal,2019-03-05,92129,0
+38,male,typical angina,120,231,FALSE,normal,182,yes,3.8,flat,0,reversable defect,2019-03-06,92129,1
+41,male,non-anginal pain,130,214,FALSE,left ventricular hypertrophy,168,no,2,flat,0,normal,2019-03-07,92129,0
+66,female,asymptomatic,178,228,TRUE,normal,165,yes,1,flat,2,reversable defect,2019-03-08,92129,1
+52,male,asymptomatic,112,230,FALSE,normal,160,no,0,unsloping,1,normal,2019-03-09,92129,1
+56,male,typical angina,120,193,FALSE,left ventricular hypertrophy,162,no,1.9,flat,0,reversable defect,2019-03-10,92129,0
+46,female,atypical angina,105,204,FALSE,normal,172,no,0,unsloping,0,normal,2019-03-11,92129,0
+46,female,asymptomatic,138,243,FALSE,left ventricular hypertrophy,152,yes,0,flat,0,normal,2019-03-12,92129,0
+64,female,asymptomatic,130,303,FALSE,normal,122,no,2,flat,2,normal,2019-03-13,92129,0
+59,male,asymptomatic,138,271,FALSE,left ventricular hypertrophy,182,no,0,unsloping,0,normal,2019-03-14,92129,0
+41,female,non-anginal pain,112,268,FALSE,left ventricular hypertrophy,172,yes,0,unsloping,0,normal,2019-03-15,92129,0
+54,female,non-anginal pain,108,267,FALSE,left ventricular hypertrophy,167,no,0,unsloping,0,normal,2019-03-16,92129,0
+39,female,non-anginal pain,94,199,FALSE,normal,179,no,0,unsloping,0,normal,2019-03-17,92129,0
+53,male,asymptomatic,123,282,FALSE,normal,95,yes,2,flat,2,reversable defect,2019-03-18,92129,1
+63,female,asymptomatic,108,269,FALSE,normal,169,yes,1.8,flat,2,normal,2019-03-19,92129,1
+34,female,atypical angina,118,210,FALSE,normal,192,no,0.7,unsloping,0,normal,2019-03-20,92129,0
+47,male,asymptomatic,112,204,FALSE,normal,143,no,0.1,unsloping,0,normal,2019-03-21,92129,0
+67,female,non-anginal pain,152,277,FALSE,normal,172,no,0,unsloping,1,normal,2019-03-22,92129,0
+54,male,asymptomatic,110,206,FALSE,left ventricular hypertrophy,108,yes,0,flat,1,normal,2019-03-23,92129,1
+66,male,asymptomatic,112,212,FALSE,left ventricular hypertrophy,132,yes,0.1,unsloping,1,normal,2019-03-24,92129,1
+52,female,non-anginal pain,136,196,FALSE,left ventricular hypertrophy,169,no,0.1,flat,0,normal,2019-03-25,92129,0
+55,female,asymptomatic,180,327,FALSE,ST-T wave abnormality,117,yes,3.4,flat,0,normal,2019-03-26,92129,1
+49,male,non-anginal pain,118,149,FALSE,left ventricular hypertrophy,126,no,0.8,unsloping,3,normal,2019-03-27,92129,1
+74,female,atypical angina,120,269,FALSE,left ventricular hypertrophy,121,yes,0.2,unsloping,1,normal,2019-03-28,92129,0
+54,female,non-anginal pain,160,201,FALSE,normal,163,no,0,unsloping,1,normal,2019-03-29,92129,0
+54,male,asymptomatic,122,286,FALSE,left ventricular hypertrophy,116,yes,3.2,flat,2,normal,2019-03-30,92129,1
+56,male,asymptomatic,130,283,TRUE,left ventricular hypertrophy,103,yes,1.6,downsloping,0,reversable defect,2019-03-31,92129,1
+46,male,asymptomatic,120,249,FALSE,left ventricular hypertrophy,144,no,0.8,unsloping,0,reversable defect,2019-04-01,92129,1
+49,female,atypical angina,134,271,FALSE,normal,162,no,0,flat,0,normal,2019-04-02,92129,0
+42,male,atypical angina,120,295,FALSE,normal,162,no,0,unsloping,0,normal,2019-04-03,92129,0
+41,male,atypical angina,110,235,FALSE,normal,153,no,0,unsloping,0,normal,2019-04-04,92129,0
+41,female,atypical angina,126,306,FALSE,normal,163,no,0,unsloping,0,normal,2019-04-05,92129,0
+49,female,asymptomatic,130,269,FALSE,normal,163,no,0,unsloping,0,normal,2019-04-06,92129,0
+61,male,typical angina,134,234,FALSE,normal,145,no,2.6,flat,2,normal,2019-04-07,92129,1
+60,female,non-anginal pain,120,178,TRUE,normal,96,no,0,unsloping,0,normal,2019-04-08,92129,0
+67,male,asymptomatic,120,237,FALSE,normal,71,no,1,flat,0,normal,2019-04-09,92129,1
+58,male,asymptomatic,100,234,FALSE,normal,156,no,0.1,unsloping,1,reversable defect,2019-04-10,92129,1
+47,male,asymptomatic,110,275,FALSE,left ventricular hypertrophy,118,yes,1,flat,1,normal,2019-04-11,92129,1
+52,male,asymptomatic,125,212,FALSE,normal,168,no,1,unsloping,2,reversable defect,2019-04-12,92129,1
+62,male,atypical angina,128,208,TRUE,left ventricular hypertrophy,140,no,0,unsloping,0,normal,2019-04-13,92129,0
+57,male,asymptomatic,110,201,FALSE,normal,126,yes,1.5,flat,0,fixed defect,2019-04-14,92129,0
+58,male,asymptomatic,146,218,FALSE,normal,105,no,2,flat,1,reversable defect,2019-04-15,92129,1
+64,male,asymptomatic,128,263,FALSE,normal,105,yes,0.2,flat,1,reversable defect,2019-04-16,92129,0
+51,female,non-anginal pain,120,295,FALSE,left ventricular hypertrophy,157,no,0.6,unsloping,0,normal,2019-04-17,92129,0
+43,male,asymptomatic,115,303,FALSE,normal,181,no,1.2,flat,0,normal,2019-04-18,92129,0
+42,female,non-anginal pain,120,209,FALSE,normal,173,no,0,flat,0,normal,2019-04-19,92129,0
+67,female,asymptomatic,106,223,FALSE,normal,142,no,0.3,unsloping,2,normal,2019-04-20,92129,0
+76,female,non-anginal pain,140,197,FALSE,ST-T wave abnormality,116,no,1.1,flat,0,normal,2019-04-21,92129,0
+70,male,atypical angina,156,245,FALSE,left ventricular hypertrophy,143,no,0,unsloping,0,normal,2019-04-22,92129,0
+57,male,atypical angina,124,261,FALSE,normal,141,no,0.3,unsloping,0,reversable defect,2019-04-23,92129,1
+44,female,non-anginal pain,118,242,FALSE,normal,149,no,0.3,flat,1,normal,2019-04-24,92129,0
+58,female,atypical angina,136,319,TRUE,left ventricular hypertrophy,152,no,0,unsloping,2,normal,2019-04-25,92129,1
+60,female,typical angina,150,240,FALSE,normal,171,no,0.9,unsloping,0,normal,2019-04-26,92129,0
+44,male,non-anginal pain,120,226,FALSE,normal,169,no,0,unsloping,0,normal,2019-04-27,92129,0
+61,male,asymptomatic,138,166,FALSE,left ventricular hypertrophy,125,yes,3.6,flat,1,normal,2019-04-28,92129,1
+42,male,asymptomatic,136,315,FALSE,normal,125,yes,1.8,flat,0,fixed defect,2019-04-29,92129,1
+52,male,asymptomatic,128,204,TRUE,normal,156,yes,1,flat,0,?,2019-04-30,92129,1
+59,male,non-anginal pain,126,218,TRUE,normal,134,no,2.2,flat,1,fixed defect,2019-05-01,92129,1
+40,male,asymptomatic,152,223,FALSE,normal,181,no,0,unsloping,0,reversable defect,2019-05-02,92129,1
+42,male,non-anginal pain,130,180,FALSE,normal,150,no,0,unsloping,0,normal,2019-05-03,92129,0
+61,male,asymptomatic,140,207,FALSE,left ventricular hypertrophy,138,yes,1.9,unsloping,1,reversable defect,2019-05-04,92129,1
+66,male,asymptomatic,160,228,FALSE,left ventricular hypertrophy,138,no,2.3,unsloping,0,fixed defect,2019-05-05,92129,0
+46,male,asymptomatic,140,311,FALSE,normal,120,yes,1.8,flat,2,reversable defect,2019-05-06,92129,1
+71,female,asymptomatic,112,149,FALSE,normal,125,no,1.6,flat,0,normal,2019-05-07,92129,0
+59,male,typical angina,134,204,FALSE,normal,162,no,0.8,unsloping,2,normal,2019-05-08,92129,1
+64,male,typical angina,170,227,FALSE,left ventricular hypertrophy,155,no,0.6,flat,0,reversable defect,2019-05-09,92129,0
+66,female,non-anginal pain,146,278,FALSE,left ventricular hypertrophy,152,no,0,flat,1,normal,2019-05-10,92129,0
+39,female,non-anginal pain,138,220,FALSE,normal,152,no,0,flat,0,normal,2019-05-11,92129,0
+57,male,atypical angina,154,232,FALSE,left ventricular hypertrophy,164,no,0,unsloping,1,normal,2019-05-12,92129,1
+58,female,asymptomatic,130,197,FALSE,normal,131,no,0.6,flat,0,normal,2019-05-13,92129,0
+57,male,asymptomatic,110,335,FALSE,normal,143,yes,3,flat,1,reversable defect,2019-05-14,92129,1
+47,male,non-anginal pain,130,253,FALSE,normal,179,no,0,unsloping,0,normal,2019-05-15,92129,0
+55,female,asymptomatic,128,205,FALSE,ST-T wave abnormality,130,yes,2,flat,1,reversable defect,2019-05-16,92129,1
+35,male,atypical angina,122,192,FALSE,normal,174,no,0,unsloping,0,normal,2019-05-17,92129,0
+61,male,asymptomatic,148,203,FALSE,normal,161,no,0,unsloping,1,reversable defect,2019-05-18,92129,1
+58,male,asymptomatic,114,318,FALSE,ST-T wave abnormality,140,no,4.4,downsloping,3,fixed defect,2019-05-19,92129,1
+58,female,asymptomatic,170,225,TRUE,left ventricular hypertrophy,146,yes,2.8,flat,2,fixed defect,2019-05-20,92129,1
+58,male,atypical angina,125,220,FALSE,normal,144,no,0.4,flat,?,reversable defect,2019-05-21,92129,0
+56,male,atypical angina,130,221,FALSE,left ventricular hypertrophy,163,no,0,unsloping,0,reversable defect,2019-05-22,92129,0
+56,male,atypical angina,120,240,FALSE,normal,169,no,0,downsloping,0,normal,2019-05-23,92129,0
+67,male,non-anginal pain,152,212,FALSE,left ventricular hypertrophy,150,no,0.8,flat,0,reversable defect,2019-05-24,92129,1
+55,female,atypical angina,132,342,FALSE,normal,166,no,1.2,unsloping,0,normal,2019-05-25,92129,0
+44,male,asymptomatic,120,169,FALSE,normal,144,yes,2.8,downsloping,0,fixed defect,2019-05-26,92129,1
+63,male,asymptomatic,140,187,FALSE,left ventricular hypertrophy,144,yes,4,unsloping,2,reversable defect,2019-05-27,92129,1
+63,female,asymptomatic,124,197,FALSE,normal,136,yes,0,flat,0,normal,2019-05-28,92129,1
+41,male,atypical angina,120,157,FALSE,normal,182,no,0,unsloping,0,normal,2019-05-29,92129,0
+59,male,asymptomatic,164,176,TRUE,left ventricular hypertrophy,90,no,1,flat,2,fixed defect,2019-05-30,92129,1
+57,female,asymptomatic,140,241,FALSE,normal,123,yes,0.2,flat,0,reversable defect,2019-05-31,92129,1
+45,male,typical angina,110,264,FALSE,normal,132,no,1.2,flat,0,reversable defect,2019-06-01,92129,1
+68,male,asymptomatic,144,193,TRUE,normal,141,no,3.4,flat,2,reversable defect,2019-06-02,92129,1
+57,male,asymptomatic,130,131,FALSE,normal,115,yes,1.2,flat,1,reversable defect,2019-06-03,92129,1
+57,female,atypical angina,130,236,FALSE,left ventricular hypertrophy,174,no,0,flat,1,normal,2019-06-04,92129,1
+38,male,non-anginal pain,138,175,FALSE,normal,173,no,0,unsloping,?,normal,2019-06-05,92129,0

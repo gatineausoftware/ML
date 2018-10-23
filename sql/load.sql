@@ -1,0 +1,5 @@
+LOAD DATA INFILE '/var/lib/mysql-files/heart.csv'
+INTO TABLE health.heart
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
