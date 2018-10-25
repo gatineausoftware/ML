@@ -7,9 +7,10 @@ import os
 
 
 
-def cache_df(df,table, config):
+def cache_df(df, table, config):
     os.makedirs(config['data_cache']+'/' + table, exist_ok=False)
     df.to_csv(config['data_cache']+'/' + table + '/cache-*.csv')
+    #should return absolute path
     return os.listdir(config['data_cache']+'/' + table)
 
 
@@ -119,44 +120,41 @@ def build_estimator(metadata, batch_size, optimizer, project_dir, model_version,
 
 
 
-
-def prep(label_col, *features):
+def prep(feature_names, label_col, *features):
     f = dict(zip(feature_names, features))
     label = f[label_col]
     f.pop(label_col)
+    f.pop('id')
     return (f, label)
 
 
-feature_names = ["max_heart_rate","age","sex","chest_pain_type","resting_blood_pressure",
-                 "cholesterol","fasting_blood_sugar","resting_ecg","exercise_angina","oldpeak",
-                 "slope","colored_vessels","thal","datetime","postalcode","narrowing_diagnosis"]
 
 
 #["/home/benmackenzie/Projects/ML/export/heart-0.csv"],
 
-def csv_train_input_fn(data, label_col):
-    dataset = tf.contrib.data.CsvDataset(data, [[153], [63], ['male'], ['typical angina'], [145], [233], [0],
-                                                  ['left ventricular hypertrophy'],
-                                                  ['no'], [2.3], ['downsloping'], [0], ['fixed defect'], ['2018-08-07'],
+def csv_train_input_fn(data, feature_names, label_col):
+    dataset = tf.contrib.data.CsvDataset(data, [[0],[63], ['male'], ['typical angina'], [145], [233], [0],
+                                                  ['left ventricular hypertrophy'], [150],
+                                                  ['no'], [2.3], ['downsloping'], [0], ['fixed defect'],
                                                   ['92129'], [0]], header=True)
 
     dataset = dataset.shuffle(32).repeat().batch(32)
-    dataset = dataset.map(partial(prep, label_col))
+    dataset = dataset.map(partial(prep, feature_names, label_col))
     return dataset
 
-def csv_eval_input_fn(data, label_col, mode):
-    dataset = tf.contrib.data.CsvDataset(data, [[153], [63], ['male'], ['typical angina'], [145], [233], [0],
-                                                  ['left ventricular hypertrophy'],
-                                                  ['no'], [2.3], ['downsloping'], [0], ['fixed defect'], ['2018-08-07'],
+def csv_eval_input_fn(data, feature_names, label_col, mode):
+    dataset = tf.contrib.data.CsvDataset(data, [[0], [63], ['male'], ['typical angina'], [145], [233], [0],
+                                                  ['left ventricular hypertrophy'], [150],
+                                                  ['no'], [2.3], ['downsloping'], [0], ['fixed defect'],
                                                   ['92129'], [0]], header=True)
 
     dataset = dataset.batch(32)
-    dataset = dataset.map(partial(prep, label_col))
+    dataset = dataset.map(partial(prep, feature_names, label_col))
     return dataset
 
 
 
-def build_specs(model, data, label_col, metadata, config):
+def build_specs(model, data, feature_names, label_col, metadata, config):
     """Build training and evaluation specs.
     Args:
         None.
@@ -192,12 +190,14 @@ def build_specs(model, data, label_col, metadata, config):
     max_steps = max_epochs * steps_per_epoch
 
 
+
     # Create TrainSpec and EvalSpec
     train_spec = tf.estimator.TrainSpec(
-        partial(csv_train_input_fn, data, label_col), max_steps=max_steps, hooks=[hook])
+        partial(csv_train_input_fn, data, feature_names, label_col), max_steps=max_steps, hooks=[hook])
 
+    #does lambda do ths same thing as partial?
     eval_spec = tf.estimator.EvalSpec(
-        lambda: partial(csv_eval_input_fn, data, label_col)('eval'),
+        lambda: partial(csv_eval_input_fn, data, feature_names, label_col)('eval'),
         steps=None,
         start_delay_secs=0,
         throttle_secs=0
@@ -208,7 +208,7 @@ def build_specs(model, data, label_col, metadata, config):
 
 
 
-def train_and_evaluate(model, data, label_col, metadata, config):
+def train_and_evaluate(model, data, feature_names,label_col, metadata, config):
         '''
         model has already been created
         '''
@@ -216,7 +216,9 @@ def train_and_evaluate(model, data, label_col, metadata, config):
         #os.makedirs(self.model.eval_dir())
 
         # Train and evaluate Estimator
-        train_spec, eval_spec = build_specs(model, data, label_col, metadata, config)
+        # problem with getting feature names from dask df
+        feature_names = ['id'] + feature_names
+        train_spec, eval_spec = build_specs(model, data, feature_names, label_col, metadata, config)
         tf.estimator.train_and_evaluate(
             model, train_spec, eval_spec)
 

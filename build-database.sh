@@ -18,7 +18,7 @@ kubectl cp schema.sql ${MYSQL_POD}:/var/lib/mysql-files/.
 
 
 #   Execute schema creation and data load on MySQL
-#kubectl exec -it ${MYSQL_POD} -- bash -c "mysql -pfincrime --execute='CREATE USER \"tdai\" IDENTIFIED BY \"fincrime\"; GRANT ALL ON *.* TO \"tdai\";'"
+#kubectl exec -it ${MYSQL_POD} -- bash -c "mysql -pteradata --execute='CREATE USER \"tdai\" IDENTIFIED BY \"fincrime\"; GRANT ALL ON *.* TO \"tdai\";'"
 #echo ${CYAN}"FILES LOADED! Creating users.."${RESTORE}
 #DELETE FROM mysql.user WHERE User = "tdai";
 #kubectl exec -it ${MYSQL_POD} -- bash -c "cd /var/lib/mysql-files/ && mysql -pfincrime --execute='source mysql_schemas.sql; source mysql-data-load.sql;'"
