@@ -51,7 +51,7 @@ def df_metadata(df, label_col=None, datetime_regex="^\d{4}-\d{2}-\d{2}", time_se
 
 
     for colpos, colname in enumerate(df.columns):
-        print(colname)
+
         df_col = df[colname]
 
         # Check if it's a pathological column, containing all NaNs.  If so, skip.
