@@ -3,8 +3,18 @@ import tensorflow as tf
 from estimator_models import build_autoencoder, build_classifier, build_regressor
 from functools import partial
 import math
+import os
 
-def normalizer_fn(self, x, mean, std):
+
+
+def cache_df(df,table, config):
+    os.makedirs(config['data_cache']+'/' + table, exist_ok=False)
+    df.to_csv(config['data_cache']+'/' + table + '/cache-*.csv')
+    return os.listdir(config['data_cache']+'/' + table)
+
+
+
+def normalizer_fn(x, mean, std):
     """Z-score feature tensor.
     Args:
         x: TF feature tensor.
@@ -107,68 +117,46 @@ def build_estimator(metadata, batch_size, optimizer, project_dir, model_version,
 
 
 
-def train_input_fn(training_df, metadata, label_col, config):
-    """Training input function for Estimator.
-    Args:
-        None.
-    Returns:
-        Dataset: TF Dataset for training.
-    """
 
-    # Retrieve appropriate shuffle buffer size (dataset length)
-    buffer_size = metadata['_global']['num_rows']
 
-    # Retrieve feature dictionary
-    feature_dict = dict(
-        training_df.loc[:, training_df.columns != label_col]
-    )
 
-    # Retrieve labels
-    if label_col == None:
-        tensors = feature_dict
-    else:
-        labels = training_df.loc[:, training_df.columns == label_col]
-        tensors = (feature_dict, labels)
+def prep(label_col, *features):
+    f = dict(zip(feature_names, features))
+    label = f[label_col]
+    f.pop(label_col)
+    return (f, label)
 
-    # Create TF Dataset for training
-    dataset = tf.data.Dataset.from_tensor_slices(tensors)
-    dataset = dataset.shuffle(buffer_size).repeat().batch(config['batch_size'])
 
+feature_names = ["max_heart_rate","age","sex","chest_pain_type","resting_blood_pressure",
+                 "cholesterol","fasting_blood_sugar","resting_ecg","exercise_angina","oldpeak",
+                 "slope","colored_vessels","thal","datetime","postalcode","narrowing_diagnosis"]
+
+
+#["/home/benmackenzie/Projects/ML/export/heart-0.csv"],
+
+def csv_train_input_fn(data, label_col):
+    dataset = tf.contrib.data.CsvDataset(data, [[153], [63], ['male'], ['typical angina'], [145], [233], [0],
+                                                  ['left ventricular hypertrophy'],
+                                                  ['no'], [2.3], ['downsloping'], [0], ['fixed defect'], ['2018-08-07'],
+                                                  ['92129'], [0]], header=True)
+
+    dataset = dataset.shuffle(32).repeat().batch(32)
+    dataset = dataset.map(partial(prep, label_col))
     return dataset
 
-def eval_input_fn(validation_df, metadata, label_col, config, mode):
-    """Evaluation input function for Estimator.
-    Args:
-        mode: Available modes are 'eval' or 'test'.
-    Returns:
-        Dataset: TF Dataset for evaluation.
-    """
+def csv_eval_input_fn(data, label_col, mode):
+    dataset = tf.contrib.data.CsvDataset(data, [[153], [63], ['male'], ['typical angina'], [145], [233], [0],
+                                                  ['left ventricular hypertrophy'],
+                                                  ['no'], [2.3], ['downsloping'], [0], ['fixed defect'], ['2018-08-07'],
+                                                  ['92129'], [0]], header=True)
 
-    # Handle evaluation or testing input functions
-    if mode == 'eval':
-        df = validation_df
-    else:
-        df = validation_df
-
-    # Retrieve feature dictionary
-    feature_dict = dict(
-        df.loc[:, df.columns != label_col]
-    )
-
-    # Retrieve labels
-    if label_col == None:
-        tensors = feature_dict
-    else:
-        labels = df.loc[:, df.columns == label_col]
-        tensors = (feature_dict, labels)
-
-    # Create TF Dataset for evaluation
-    dataset = tf.data.Dataset.from_tensor_slices(tensors)
-    dataset = dataset.batch(config['batch_size'])
-
+    dataset = dataset.batch(32)
+    dataset = dataset.map(partial(prep, label_col))
     return dataset
 
-def build_specs(model, df, label_col, metadata, config):
+
+
+def build_specs(model, data, label_col, metadata, config):
     """Build training and evaluation specs.
     Args:
         None.
@@ -206,10 +194,10 @@ def build_specs(model, df, label_col, metadata, config):
 
     # Create TrainSpec and EvalSpec
     train_spec = tf.estimator.TrainSpec(
-        partial(train_input_fn, df, metadata, label_col, config), max_steps=max_steps, hooks=[hook])
+        partial(csv_train_input_fn, data, label_col), max_steps=max_steps, hooks=[hook])
 
     eval_spec = tf.estimator.EvalSpec(
-        lambda: partial(eval_input_fn, df, metadata, label_col, config),
+        lambda: partial(csv_eval_input_fn, data, label_col)('eval'),
         steps=None,
         start_delay_secs=0,
         throttle_secs=0
@@ -220,7 +208,7 @@ def build_specs(model, df, label_col, metadata, config):
 
 
 
-def train_and_evaluate(model, df, label_col, metadata, config):
+def train_and_evaluate(model, data, label_col, metadata, config):
         '''
         model has already been created
         '''
@@ -228,7 +216,7 @@ def train_and_evaluate(model, df, label_col, metadata, config):
         #os.makedirs(self.model.eval_dir())
 
         # Train and evaluate Estimator
-        train_spec, eval_spec = build_specs(model, df, label_col, metadata, config)
+        train_spec, eval_spec = build_specs(model, data, label_col, metadata, config)
         tf.estimator.train_and_evaluate(
             model, train_spec, eval_spec)
 
