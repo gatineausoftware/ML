@@ -6,7 +6,7 @@ import math
 import os
 
 
-
+#even if i specify what columns to write out and don't include index, index is still written out
 def cache_df(df, table, config):
     os.makedirs(config['data_cache']+'/' + table, exist_ok=False)
     df.to_csv(config['data_cache']+'/' + table + '/cache-*.csv')
@@ -124,29 +124,22 @@ def prep(feature_names, label_col, *features):
     f = dict(zip(feature_names, features))
     label = f[label_col]
     f.pop(label_col)
+    #so annoying!  dask insists on writing out id....even though it is otherwise inaccessible
     f.pop('id')
     return (f, label)
 
 
 
 
-#["/home/benmackenzie/Projects/ML/export/heart-0.csv"],
-
-def csv_train_input_fn(data, feature_names, label_col):
-    dataset = tf.contrib.data.CsvDataset(data, [[0],[63], ['male'], ['typical angina'], [145], [233], [0],
-                                                  ['left ventricular hypertrophy'], [150],
-                                                  ['no'], [2.3], ['downsloping'], [0], ['fixed defect'],
-                                                  ['92129'], [0]], header=True)
+def csv_train_input_fn(data, feature_names, label_col, defaults):
+    dataset = tf.contrib.data.CsvDataset(data, defaults, header=True)
 
     dataset = dataset.shuffle(32).repeat().batch(32)
     dataset = dataset.map(partial(prep, feature_names, label_col))
     return dataset
 
-def csv_eval_input_fn(data, feature_names, label_col, mode):
-    dataset = tf.contrib.data.CsvDataset(data, [[0], [63], ['male'], ['typical angina'], [145], [233], [0],
-                                                  ['left ventricular hypertrophy'], [150],
-                                                  ['no'], [2.3], ['downsloping'], [0], ['fixed defect'],
-                                                  ['92129'], [0]], header=True)
+def csv_eval_input_fn(data, feature_names, label_col, defaults, mode):
+    dataset = tf.contrib.data.CsvDataset(data, defaults, header=True)
 
     dataset = dataset.batch(32)
     dataset = dataset.map(partial(prep, feature_names, label_col))
@@ -154,7 +147,7 @@ def csv_eval_input_fn(data, feature_names, label_col, mode):
 
 
 
-def build_specs(model, data, feature_names, label_col, metadata, config):
+def build_specs(model, data, feature_names, label_col, metadata, config, defaults):
     """Build training and evaluation specs.
     Args:
         None.
@@ -179,7 +172,7 @@ def build_specs(model, data, feature_names, label_col, metadata, config):
     else:  # regression or autoencoder
         hook = tf.contrib.estimator.stop_if_no_decrease_hook(
             model,
-            'loss',
+          'loss',
             max_steps_without,
             run_every_secs=None,
             run_every_steps=steps_per_epoch
@@ -193,11 +186,11 @@ def build_specs(model, data, feature_names, label_col, metadata, config):
 
     # Create TrainSpec and EvalSpec
     train_spec = tf.estimator.TrainSpec(
-        partial(csv_train_input_fn, data, feature_names, label_col), max_steps=max_steps, hooks=[hook])
+        partial(csv_train_input_fn, data, feature_names, label_col, defaults), max_steps=max_steps, hooks=[hook])
 
     #does lambda do ths same thing as partial?
     eval_spec = tf.estimator.EvalSpec(
-        lambda: partial(csv_eval_input_fn, data, feature_names, label_col)('eval'),
+        lambda: partial(csv_eval_input_fn, data, feature_names, label_col, defaults)('eval'),
         steps=None,
         start_delay_secs=0,
         throttle_secs=0
@@ -208,7 +201,7 @@ def build_specs(model, data, feature_names, label_col, metadata, config):
 
 
 
-def train_and_evaluate(model, data, feature_names,label_col, metadata, config):
+def train_and_evaluate(model, data, feature_names,label_col, metadata, config, defaults):
         '''
         model has already been created
         '''
@@ -218,9 +211,43 @@ def train_and_evaluate(model, data, feature_names,label_col, metadata, config):
         # Train and evaluate Estimator
         # problem with getting feature names from dask df
         feature_names = ['id'] + feature_names
-        train_spec, eval_spec = build_specs(model, data, feature_names, label_col, metadata, config)
+        train_spec, eval_spec = build_specs(model, data, feature_names, label_col, metadata, config, defaults)
         tf.estimator.train_and_evaluate(
             model, train_spec, eval_spec)
 
 
 
+def cat_float_to_str(df, metadata):
+    """Convert categorical floats to strings.
+    Args:
+        None.
+    Returns:
+        None.
+    """
+
+    # Convert categorical float features to str
+    for _, feature in enumerate(df.columns):
+        dtype = df[feature].dtype
+        ds_type = metadata[feature]['ds_type']
+
+        if dtype == float and (ds_type == 'cat_onehot' or ds_type == 'cat_embed'):
+
+            # Cast metadata vocab as str
+            vocabulary_list = metadata[feature]['vocab']
+            metadata[feature]['vocab'] = [str(item)
+                for item in vocabulary_list]
+
+            metadata[feature]['mode'] = str(metadata[feature]['mode'])
+
+            # Cast dataframe columns as str
+            df[feature] = df[feature].astype(str)
+
+
+def get_defaults(df, metadata):
+    d = [[0]]  #the 0 is for the id!!! painful
+    for _, feature in enumerate(df.columns):
+       a = []
+       a.append(metadata[feature]['mode'])
+       d.append(a)
+
+    return d

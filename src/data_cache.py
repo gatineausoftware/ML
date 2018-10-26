@@ -3,6 +3,10 @@ import dask.dataframe as dd
 import metadata_extract
 import nn
 import tensorflow as tf
+import features
+import json
+
+
 
 
 
@@ -30,6 +34,17 @@ df = dd.read_sql_table(table_name, uri, index_col, divisions=None, npartitions=N
 
 #do feature engineering on dask
 
+'''
+ #postalcode_info = json.load(open('postalcode_info.json'))
+
+def get_lat(x):
+    return postalcode_info[str(x)]['lat']
+df['location' + '_lat'] = df['postalcode'].apply(get_lat, meta=('x', float))
+'''
+
+p = features.get_postalcode()
+p(df, 'location', 'postalcode')
+
 
 #get metadata
 metadata = metadata_extract.df_metadata(df, label_col=None, datetime_regex="^\d{4}-\d{2}-\d{2}", time_series_len=None, existing_md=None)
@@ -37,6 +52,12 @@ metadata = metadata_extract.df_metadata(df, label_col=None, datetime_regex="^\d{
 
 #from UI
 metadata['_ml']['problem_type'] = 'classification'
+
+
+nn.cat_float_to_str(df, metadata)
+
+#missing
+d = nn.get_defaults(df, metadata)
 
 
 fc = nn.build_feature_columns(df, label_col, metadata)
@@ -52,7 +73,7 @@ model = nn.build_estimator(metadata, 64, config['optimizer'], config['model_dir'
 
 
 
-nn.train_and_evaluate(model, cache, feature_names, label_col, metadata, config)
+nn.train_and_evaluate(model, cache, feature_names, label_col, metadata, config, d)
 
 
 

@@ -16,15 +16,15 @@ def prep(*features):
  f.pop('narrowing_diagnosis')
  return (f, label)
 
-#dataset = tf.contrib.data.CsvDataset(filenames, [[153],[63], ['male'], ['typical angina'], [145], [233], [0], ['left ventricular hypertrophy'],
-# ['no'], [2.3], ['downsloping'], [0], ['fixed defect'],['2018-08-07'], ['92129'], [0]], header=True)
+dataset = tf.contrib.data.CsvDataset(filenames, [[153],[63], ['male'], ['typical angina'], [145], [233], [0], ['left ventricular hypertrophy'],
+['no'], [2.3], ['downsloping'], [0], ['fixed defect'],['2018-08-07'], ['92129'], [0]], header=True)
 
-#dataset = dataset.batch(32)
-#dataset = dataset.map(prep)
-#iterator = dataset.make_one_shot_iterator()
-#next_element = iterator.get_next()
-#sess = tf.Session()
-#print(sess.run(next_element))
+dataset = dataset.batch(32)
+dataset = dataset.map(prep)
+iterator = dataset.make_one_shot_iterator()
+next_element = iterator.get_next()
+sess = tf.Session()
+print(sess.run(next_element))
 
 
 
