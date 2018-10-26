@@ -10,9 +10,11 @@ import os
 def cache_df(df, table, config):
     os.makedirs(config['data_cache']+'/' + table, exist_ok=False)
     df.to_csv(config['data_cache']+'/' + table + '/cache-*.csv')
-    #should return absolute path
-    return os.listdir(config['data_cache']+'/' + table)
-
+    root_dir = config['data_cache']+'/' + table
+    f = os.listdir(root_dir)
+    g = [root_dir + '/' + s for s in f]
+    #return os.listdir(config['data_cache']+'/' + table)
+    return g
 
 
 def normalizer_fn(x, mean, std):
